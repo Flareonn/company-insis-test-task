@@ -1,0 +1,50 @@
+.sidebar {
+  &-logo {
+    padding: 0px 40px;
+    &__image {
+      display: block;
+    }
+    &__text {
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 600;
+      color: @g-primary;
+      user-select: none;
+    }
+  }
+  &-nav {
+    margin-top: 15px;
+    &__item a {
+      width: 100%;
+      display: inline-flex;
+
+      text-decoration: none;
+      padding: 17px 0px;
+
+      &:hover span,
+      &.router-link-exact-active span {
+        color: @g-primary-active;
+      }
+
+      &.router-link-exact-active span {
+        position: relative;
+        &::after {
+          position: absolute;
+          top: 0;
+          left: 0;
+          content: "";
+
+          height: 100%;
+          width: 2px;
+
+          background-color: @g-primary-active;
+        }
+      }
+      span {
+        .text();
+        color: @g-primary;
+        padding-left: 38px;
+      }
+    }
+  }
+}

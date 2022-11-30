@@ -1,0 +1,66 @@
+@import "sidebar";
+
+#app {
+  height: 100vh;
+
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 20px;
+
+  background-color: @g-secondary100;
+  .sidebar {
+    height: calc(100vh - 38px);
+    background-color: @g-secondary100;
+    position: relative;
+  }
+  .main,
+  .sidebar {
+    padding-top: 38px;
+  }
+  .main {
+    overflow-y: auto;
+    padding-right: 58px;
+  }
+}
+
+.home-page {
+  display: grid;
+  grid-template-columns: 1224px 1fr;
+  grid-gap: 35px;
+  grid-template-areas: "summary chart-doughnut" "chart-bar chart-doughnut";
+
+  align-content: flex-start;
+  .summary {
+    align-self: flex-start;
+    grid-area: summary;
+  }
+  .chart {
+    &-bar {
+      grid-area: chart-bar;
+    }
+    &-doughnut {
+      grid-area: chart-doughnut;
+    }
+  }
+}
+
+.divisions-page {
+  .p-datatable .p-datatable-thead > tr > th {
+    background-color: transparent;
+
+    padding-bottom: 3px;
+    padding-top: 3px;
+
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0.04em;
+    color: @g-primary;
+  }
+  .p-datatable .p-datatable-tbody > tr > td {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 23px;
+    color: @g-secondary900;
+  }
+}

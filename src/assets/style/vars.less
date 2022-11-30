@@ -1,0 +1,35 @@
+// COLORS
+
+@g-primary: #aeaeae;
+@g-primary-active: #767676;
+
+@g-secondary: #ebebeb;
+@g-secondary100: #f5f5f5;
+@g-secondary200: #e4e4e4;
+@g-secondary900: #2f353d;
+
+// FONTS
+.font(@weight: 400, @lh: 1rem) {
+  font-weight: @weight;
+  line-height: @lh;
+}
+
+.label() {
+  font-size: 12px;
+  .font(400, 16px);
+}
+
+.heading() {
+  font-size: 28px;
+  .font(700, 34px);
+}
+
+.subheading() {
+  font-size: 20px;
+  .font(700, 28px);
+}
+
+.text() {
+  font-size: 16px;
+  .font(400, 23px);
+}

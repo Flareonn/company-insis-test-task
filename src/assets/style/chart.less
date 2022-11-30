@@ -1,0 +1,45 @@
+.chart {
+  background-color: #fff;
+  &-tooltip {
+    padding: 20px;
+    border-radius: 4px;
+
+    background-color: inherit;
+    box-shadow: 0px 2px 10px rgba(0, 102, 159, 0.15);
+
+    user-select: none;
+    &-container {
+      .label();
+      b {
+        font-weight: 600;
+      }
+    }
+  }
+  &-legend {
+    width: 100%;
+    background-color: inherit;
+    padding: 0px 30px 12px;
+    &-total {
+      text-align: right;
+      padding-right: 10px;
+      padding-bottom: 10px;
+    }
+    table {
+      width: inherit;
+
+      .label();
+      font-weight: 600;
+    }
+    &-list tr {
+      border: 1px solid @g-secondary200;
+      border-left: none;
+      border-right: none;
+      td {
+        padding: 5px 0px;
+        span {
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+}
